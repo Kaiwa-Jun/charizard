@@ -5,8 +5,5 @@ class User < ApplicationRecord
   validates :password, confirmation: true
   validates :password_confirmation, presence: true
   validates :email, uniqueness: true
-  
-  gets '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  post '/logout' => 'sessions#destroy'
+
 end
